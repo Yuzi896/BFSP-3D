@@ -494,7 +494,7 @@ update_fx <- function(fhat_star, theta_star,phi_star,evens, odds, M, x,y,z,cente
   return(fhat)
 }
 
-run_summary <- function(out,burn = 50000,voxel_size = c(1.09375, 1.09375, 3.000000),data=NULL){
+run_summary <- function(out,burn = 50000,voxel_size = c(1.09375, 1.09375, 3.000000),data=NULL,names=c('T2', 'AUGC', 'KTRANS', 'ADC', 'KEP')){
   
   iterations <- dim(out[[5]])[1]
   x<-out[[1]]
@@ -584,7 +584,7 @@ run_summary <- function(out,burn = 50000,voxel_size = c(1.09375, 1.09375, 3.0000
   
   if(!is.null(data)){
     value_table <- list()
-    names <-c('T2', 'AUGC', 'KTRANS', 'ADC', 'KEP')
+ 
     data <- data[,names]
     for(i in 1:5){
       if(names[i]=='ADC'){
