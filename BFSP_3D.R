@@ -494,7 +494,7 @@ update_fx <- function(fhat_star, theta_star,phi_star,evens, odds, M, x,y,z,cente
   return(fhat)
 }
 
-plot_3d <- function(out,burn = 50000,voxel_size = c(1.09375, 1.09375, 3.000000),data=NULL){
+run_summary <- function(out,burn = 50000,voxel_size = c(1.09375, 1.09375, 3.000000),data=NULL){
   
   iterations <- dim(out[[5]])[1]
   x<-out[[1]]
