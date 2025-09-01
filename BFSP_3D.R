@@ -616,8 +616,8 @@ run_summary <- function(out,burn = 50000,voxel_size = c(1.09375, 1.09375, 3.0000
     }
   }
   if(is.null(data)){
-    return(list(cluster = list(post_mean=cluster_mean,lower=cluster_lower,upper=cluster_upper),surface = list(upper=f_u,mean=f_mean,lower=f_l), measurements = list(volumn=volumn,volumn_ci=volumn_ci,dimension=dimension,prostate_volumn=prostate)))
+    return(list(cluster = list(post_mean=cluster_mean,lower=cluster_lower,upper=cluster_upper), measurements = list(volumn=volumn,volumn_ci=volumn_ci,dimension=dimension,prostate_volumn=prostate)))
   }else{
-    return(list(cluster = list(post_mean=cluster_mean,lower=cluster_lower,upper=cluster_upper),surface = list(upper=f_u,mean=f_mean,lower=f_l), measurements = list(volumn=volumn,volumn_ci=volumn_ci,dimension=dimension,prostate_volumn=prostate,apprx_value = value_table)))
+    return(list(cluster = list(post_mean=cluster_mean,lower=cluster_lower,upper=cluster_upper), measurements = list(volumn=volumn,volumn_ci=volumn_ci,dimension=dimension,prostate_volumn=prostate,apprx_value = value_table)))
   }
 }
